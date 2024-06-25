@@ -1,21 +1,17 @@
 package model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
 
-@Entity
 public class Employee {
-	private Integer id;
-	private String fullname;
-	private String gender;
-	private String birth;
-	private String position;
-	private String status;
-	private String address;
-	private String email;
-	private String phone;
-	private int salary;
+	private String ID;
+	private String FullName;
+	private String Gender;
+	private String DateofBirth;
+	private String Position;
+	private String Status;
+	private String Address;
+	private String Email;
+	private String PhoneNumber;
+	private int Salary;
 	
 	
 	public Employee() {
@@ -23,131 +19,122 @@ public class Employee {
 	}
 
 
-	public Employee(Integer id, String fullname, String gender, String birth, String position, String status,
-			String address, String email, String phone, int salary) {
+	public Employee(String iD, String fullName, String gender, String dateofBirth, String position, String status,
+			String address, String email, String phoneNumber, int salary) {
 		super();
-		this.id = id;
-		this.fullname = fullname;
-		this.gender = gender;
-		this.birth = birth;
-		this.position = position;
-		this.status = status;
-		this.address = address;
-		this.email = email;
-		this.phone = phone;
-		this.salary = salary;
-	}
-
-@Id//khóa chính
-//@GeneratedValue // tự động tăng
-	public Integer getId() {
-		return id;
+		ID = iD;
+		FullName = fullName;
+		Gender = gender;
+		DateofBirth = dateofBirth;
+		Position = position;
+		Status = status;
+		Address = address;
+		Email = email;
+		PhoneNumber = phoneNumber;
+		Salary = salary;
 	}
 
 
-	public void setId(Integer id) {
-		this.id = id;
+	public String getID() {
+		return ID;
 	}
 
 
-	public String getFullname() {
-		return fullname;
+	public void setID(String iD) {
+		ID = iD;
 	}
 
 
-	public void setFullname(String fullname) {
-		this.fullname = fullname;
+	public String getFullName() {
+		return FullName;
+	}
+
+
+	public void setFullName(String fullName) {
+		FullName = fullName;
 	}
 
 
 	public String getGender() {
-		return gender;
+		return Gender;
 	}
 
 
 	public void setGender(String gender) {
-		this.gender = gender;
+		Gender = gender;
 	}
 
 
-	public String getBirth() {
-		return birth;
+	public String getDateofBirth() {
+		return DateofBirth;
 	}
 
 
-	public void setBirth(String birth) {
-		this.birth = birth;
+	public void setDateofBirth(String dateofBirth) {
+		DateofBirth = dateofBirth;
 	}
 
 
 	public String getPosition() {
-		return position;
+		return Position;
 	}
 
 
 	public void setPosition(String position) {
-		this.position = position;
+		Position = position;
 	}
 
 
 	public String getStatus() {
-		return status;
+		return Status;
 	}
 
 
 	public void setStatus(String status) {
-		this.status = status;
+		Status = status;
 	}
 
 
 	public String getAddress() {
-		return address;
+		return Address;
 	}
 
 
 	public void setAddress(String address) {
-		this.address = address;
+		Address = address;
 	}
 
 
 	public String getEmail() {
-		return email;
+		return Email;
 	}
 
 
 	public void setEmail(String email) {
-		this.email = email;
+		Email = email;
 	}
 
 
-	public String getPhone() {
-		return phone;
+	public String getPhoneNumber() {
+		return PhoneNumber;
 	}
 
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setPhoneNumber(String phoneNumber) {
+		PhoneNumber = phoneNumber;
 	}
 
 
 	public int getSalary() {
-		return salary;
+		return Salary;
 	}
 
 
 	public void setSalary(int salary) {
-		this.salary = salary;
+		Salary = salary;
 	}
 
 
-	@Override
-	public String toString() {
-		return "NhanVienmodel [id=" + id + ", fullname=" + fullname + ", gender=" + gender + ", birth=" + birth
-				+ ", position=" + position + ", status=" + status + ", address=" + address + ", email=" + email
-				+ ", phone=" + phone + ", salary=" + salary + ", getClass()=" + getClass() + ", hashCode()="
-				+ hashCode() + ", toString()=" + super.toString() + "]";
-	}
-	
 	
 }
 

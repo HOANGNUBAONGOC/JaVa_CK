@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0f27e881-992e-482b-b7b2-05d3f8998f06" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/ResultSet2xml.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/ResultSet2xml__2_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/ResultSet2xml__3_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/ResultSet2xml__4_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/ResultSet2xml__5_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/ResultSet2xml__6_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/ResultSet2xml.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Admin_controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/DatabaseUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Employee_controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Login_controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/SQLConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ViewPro_controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/conn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/Login_view.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/Splash.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/ViewProfile_view.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icon/img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icon/photo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icon/plash.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/icon/Screenshot 2024-04-05 105657.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/icon/add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/icon/boss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/icon/dashboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/icon/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/icon/employee.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/icon/login.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/icon/profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/icon/salary.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/icon/signin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/icon/update.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/icon/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/icon/user1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Connect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/HibernateUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/icon/Screenshot 2024-04-05 105657.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icon/Screenshot 2024-04-05 105657.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/icon/add.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icon/add.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/icon/boss.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icon/boss.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/icon/dashboard.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icon/dashboard.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/icon/delete.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icon/delete.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/icon/employee.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icon/employee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/icon/login.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icon/login.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/icon/profile.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icon/profile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/icon/salary.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icon/salary.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/icon/signin.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icon/signin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/icon/update.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icon/update.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/icon/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icon/user.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/icon/user1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icon/user1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/Add_view.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/AdminForm_view.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/AdminForm_view.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/Delete_view.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/EmployeeForm_view.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/EmployeeForm_view.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/Logo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/NhanVienview.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/Signin_view.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/Update_view.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/javaCK/javaCK/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/javaCK/javaCK/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/Connect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/HibernateUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/Add_view$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/Add_view$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/Add_view$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/Add_view.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/AdminForm_view$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/AdminForm_view$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/AdminForm_view$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/AdminForm_view$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/AdminForm_view$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/AdminForm_view$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/AdminForm_view.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/AdminForm_view.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/Delete_view$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/Delete_view$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/Delete_view$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/Delete_view.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/EmployeeForm_view$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/EmployeeForm_view$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/EmployeeForm_view$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/EmployeeForm_view$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/EmployeeForm_view$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/EmployeeForm_view.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/EmployeeForm_view.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/Logo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/NhanVienview$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/NhanVienview.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/Signin_view$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/Signin_view$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/Signin_view$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/Signin_view.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/Update_view$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/Update_view$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/Update_view$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/Update_view.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/controller/Admin_controller.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2hSLOhMW4YdLEB99AtYVae4DuR2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DAO.executor": "Run",
+    "Application.DBConnection.executor": "Run",
+    "Application.Login_view.executor": "Run",
+    "Application.Run.executor": "Run",
+    "Application.Server.executor": "Run",
+    "Application.Splash.executor": "Run",
+    "Application.ViewProfile_view.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/java/java_intell/javaCK_final",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java\eclipse-workspace\javaCK\src\main\resources\icon" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Splash">
+    <configuration name="Login_view" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.Login_view" />
+      <module name="javaCK" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="controller.Run" />
+      <module name="javaCK" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="controller.Server" />
+      <module name="javaCK" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Splash" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.Splash" />
+      <module name="javaCK" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ViewProfile_view" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.ViewProfile_view" />
+      <module name="javaCK" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Splash" />
+        <item itemvalue="Application.Server" />
+        <item itemvalue="Application.Login_view" />
+        <item itemvalue="Application.ViewProfile_view" />
+        <item itemvalue="Application.Run" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0f27e881-992e-482b-b7b2-05d3f8998f06" name="Changes" comment="" />
+      <created>1717582502909</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717582502909</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

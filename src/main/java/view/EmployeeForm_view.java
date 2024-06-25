@@ -1,228 +1,293 @@
 package view;
 
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-
-import java.awt.Color;
-import javax.swing.JLabel;
-import javax.swing.ImageIcon;
-import javax.swing.SwingConstants;
-import java.awt.Font;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.util.List;
-
-import javax.swing.border.BevelBorder;
-import javax.swing.border.EtchedBorder;
-import javax.swing.JButton;
-import javax.swing.JTable;
-import javax.swing.border.SoftBevelBorder;
-import javax.swing.table.DefaultTableModel;
-
-import controller.HibernateUtil;
-import model.Employee;
-
-import javax.swing.JTextField;
-import javax.swing.UIManager;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import com.toedter.calendar.JDateChooser;
+import controller.Admin_controller;
+import controller.conn;
+import net.proteanit.sql.DbUtils;
+import controller.Employee_controller;
+import java.sql.Connection;
+import javax.swing.*;
+import java.awt.*;
+import java.sql.ResultSet;
+//import static org.bouncycastle.asn1.x500.style.RFC4519Style.c;
 
 public class EmployeeForm_view extends JFrame {
+    private Employee_controller employeeController;
 
     public JFrame frame;
-    public JLabel user;
     public JLabel NVname;
     public JLabel NVposition;
     public JPanel xemtt;
     public JPanel NhanVienP;
+    public JPanel employee_P;
+    public JButton out, search;
     public JTable table;
-    public JTextField search_input;
-    
-    Employee em = new Employee();
-
-    public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                	EmployeeForm_view window = new EmployeeForm_view();
-                    window.frame.setVisible(true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }
+    public JTextField name_input;
+    public JDateChooser birth_input;
+    public JTextField mail_input;
+    public JTextField phone_input;
+    public JTextField id_input;
+    public JTextField pos_input;
+    public JTextField address_input;
+    public JTextField salary_input;
+    public JComboBox gen_input, sta_input;
+    public ButtonGroup statusGroup;
+    public JButton add;
+    public Choice choiceEmp;
 
     public EmployeeForm_view() {
-        initialize();
-    }
 
-    private void initialize() {
+        table = new JTable();
+        table.setBounds(0, 0, 980, 367);
+        JScrollPane p = new JScrollPane(table);
+        p.setBounds(0, 0, 1091, 410);
 
-        frame = new JFrame();
-        frame.setSize(1190, 625);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().setLayout(null);
-        frame.setLocationRelativeTo(null);
+        try {
+            conn c = new conn();
+            Connection connection  = c.con;
+            ResultSet resultSet = connection.createStatement().executeQuery("select * from employee");
+            table.setModel(DbUtils.resultSetToTableModel(resultSet));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-        JPanel panel = new JPanel();
-        panel.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-        panel.setBackground(new Color(0, 0, 64));
-        panel.setBounds(-8, 0, 196, 588);
-        frame.getContentPane().add(panel);
-        panel.setLayout(null);
+        JLabel lblNewLabel = new JLabel("Add Employee");
+        lblNewLabel.setForeground(new Color(255, 255, 255));
+        lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 20));
+        lblNewLabel.setBounds(26, 10, 170, 33);
 
-        user = new JLabel("");
-        user.setHorizontalAlignment(SwingConstants.CENTER);
-        user.setForeground(new Color(0, 0, 0));
-        user.setIcon(new ImageIcon(EmployeeForm_view.class.getResource("/icon/user1.png")));
-        user.setBounds(0, 10, 195, 87);
-        panel.add(user);
+        JLabel id = new JLabel("Input ID");
+        id.setFont(new Font("Tahoma", Font.BOLD, 12));
+        id.setBounds(76, 21, 59, 23);
+
+        id_input = new JTextField();
+        id_input.setBounds(176,10,150,20);
+
+
+        JLabel name = new JLabel("Full Name");
+        name.setFont(new Font("Tahoma", Font.BOLD, 12));
+        name.setBounds(76, 54, 98, 23);
+
+        JLabel birth = new JLabel("Date of Birth");
+        birth.setFont(new Font("Tahoma", Font.BOLD, 12));
+        birth.setBounds(265, 87, 88, 23);
+
+        JLabel address = new JLabel("Address");
+        address.setFont(new Font("Tahoma", Font.BOLD, 12));
+        address.setBounds(620, 124, 73, 23);
+
+        JLabel phone = new JLabel("Phone Number");
+        phone.setFont(new Font("Tahoma", Font.BOLD, 12));
+        phone.setBounds(76, 157, 98, 28);
+
+        JLabel position = new JLabel("Position");
+        position.setFont(new Font("Tahoma", Font.BOLD, 12));
+        position.setBounds(620, 54, 73, 23);
+        JLabel status = new JLabel("Status");
+        status.setFont(new Font("Tahoma", Font.BOLD, 12));
+        status.setBounds(620, 87, 59, 23);
+
+        JLabel mail = new JLabel("Email");
+        mail.setFont(new Font("Tahoma", Font.BOLD, 12));
+        mail.setBounds(76, 124, 59, 23);
+
+        name_input = new JTextField();
+        name_input.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        name_input.setColumns(10);
+        name_input.setBounds(185, 54, 322, 23);
+        birth_input = new JDateChooser();
+        birth_input.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        birth_input.setBounds(351, 87, 156, 23);
+
+        mail_input = new JTextField();
+        mail_input.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        mail_input.setColumns(10);
+        mail_input.setBounds(185, 124, 322, 23);
+
+        phone_input = new JTextField();
+        phone_input.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        phone_input.setColumns(10);
+        phone_input.setBounds(185, 160, 322, 23);
+
+        id_input = new JTextField();
+        id_input.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        id_input.setColumns(10);
+        id_input.setBounds(185, 21, 73, 23);
+
+        JLabel gender = new JLabel("Gender");
+        gender.setFont(new Font("Tahoma", Font.BOLD, 12));
+        gender.setBounds(76, 87, 43, 23);
+
+        gen_input = new JComboBox();
+        gen_input.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        gen_input.setModel(new DefaultComboBoxModel(new String[]{"Male", "Female"}));
+        gen_input.setBounds(185, 88, 73, 21);
+
+        pos_input = new JTextField();
+        pos_input.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        pos_input.setColumns(10);
+        pos_input.setBounds(703, 54, 307, 23);
+
+        statusGroup = new ButtonGroup();
+
+        address_input = new JTextField();
+        address_input.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        address_input.setColumns(10);
+        address_input.setBounds(703, 127, 307, 23);
+
+        sta_input = new JComboBox();
+        sta_input.setModel(new DefaultComboBoxModel(new String[] {"Active", "In - Active"}));
+        sta_input.setFont(new Font("Tahoma", Font.BOLD, 12));
+        sta_input.setBounds(703, 89, 173, 21);
+
+        salary_input = new JTextField();
+        salary_input.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        salary_input.setColumns(10);
+        salary_input.setBounds(703, 160, 307, 23);
+
+        JLabel lblBasicSalary = new JLabel("Salary");
+        lblBasicSalary.setFont(new Font("Tahoma", Font.BOLD, 12));
+        lblBasicSalary.setBounds(620, 160, 59, 23);
+
+        add = new JButton("add employee");
+        add.setBackground(new Color(0, 0, 128));
+        add.setForeground(new Color(255, 255, 255));
+
+        add.setFont(new Font("Tahoma", Font.BOLD, 12));
+        add.setBounds(384, 440, 212, 33);
 
         NVname = new JLabel("ADMIN");
         NVname.setHorizontalAlignment(SwingConstants.CENTER);
         NVname.setForeground(new Color(0, 255, 64));
-        NVname.setBackground(new Color(0, 255, 64));
         NVname.setFont(new Font("Tahoma", Font.BOLD, 14));
         NVname.setBounds(43, 93, 106, 36);
-        panel.add(NVname);
 
         NVposition = new JLabel("boss");
-        NVposition.setForeground(new Color(255, 255, 255));
+        NVposition.setForeground(Color.WHITE);
         NVposition.setFont(new Font("Tahoma", Font.BOLD, 13));
-        NVposition.setBackground(new Color(0, 255, 64));
-        NVposition.setBounds(76, 124, 46, 29);
-        panel.add(NVposition);
+        NVposition.setBounds(55, 124, 106, 29);
 
         xemtt = new JPanel();
-
-        xemtt.setForeground(new Color(255, 255, 255));
-        xemtt.setBorder(new BevelBorder(BevelBorder.LOWERED, new Color(255, 255, 255), new Color(255, 255, 255), new Color(255, 255, 255), new Color(255, 255, 255)));
-        xemtt.setBackground(new Color(0, 0, 0));
-        xemtt.setBounds(28, 163, 146, 36);
-        panel.add(xemtt);
+        xemtt.setForeground(Color.WHITE);
+        xemtt.setBorder(BorderFactory.createBevelBorder(1, Color.WHITE, Color.WHITE, Color.WHITE, Color.WHITE));
+        xemtt.setBackground(Color.BLACK);
+        xemtt.setBounds(23, 163, 146, 36);
         xemtt.setLayout(null);
 
-        JLabel lblNewLabel = new JLabel("View Profile");
-        lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 16));
-        lblNewLabel.setForeground(new Color(255, 255, 255));
-        lblNewLabel.setBounds(0, 0, 146, 36);
-        xemtt.add(lblNewLabel);
+        JLabel lblViewProfile = new JLabel("View Profile");
+        lblViewProfile.setHorizontalAlignment(SwingConstants.CENTER);
+        lblViewProfile.setFont(new Font("Tahoma", Font.BOLD, 16));
+        lblViewProfile.setForeground(Color.WHITE);
+        lblViewProfile.setBounds(0, 0, 146, 36);
+        xemtt.add(lblViewProfile);
 
-        NhanVienP = new JPanel();
+        JLabel lblEmployee = new JLabel("Employee");
+        lblEmployee.setForeground(Color.WHITE);
+        lblEmployee.setFont(new Font("Tahoma", Font.BOLD, 13));
+        lblEmployee.setBounds(62, 50, 73, 16);
 
-        NhanVienP.setLayout(null);
-        NhanVienP.setBackground(Color.BLACK);
-        NhanVienP.setBounds(0, 231, 195, 76);
-        panel.add(NhanVienP);
-
-        JLabel lblNewLabel_1_1 = new JLabel("Employee");
-        lblNewLabel_1_1.setForeground(Color.WHITE);
-        lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 13));
-        lblNewLabel_1_1.setBounds(62, 50, 73, 16);
-        NhanVienP.add(lblNewLabel_1_1);
-        
-        JLabel nv_img = new JLabel("");
-        nv_img.setIcon(new ImageIcon(EmployeeForm_view.class.getResource("/icon/employee.png")));
-        nv_img.setBounds(76, 10, 45, 41);
-        NhanVienP.add(nv_img);
-        
-        JButton out = new JButton("LOG OUT");
-       
-        out.setBackground(new Color(255, 255, 255));
+        out = new JButton("LOG OUT");
+        out.setBackground(Color.WHITE);
         out.setFont(new Font("Tahoma", Font.BOLD, 14));
         out.setBounds(49, 506, 100, 36);
+
+        System.out.println(getClass().getResource("/icon/user.png"));
+        ImageIcon userimg1 = new ImageIcon("src/main/resources/icon/user.png");
+        Image userimg2 = userimg1.getImage().getScaledInstance(64, 64, Image.SCALE_DEFAULT);
+        ImageIcon userimg3 = new ImageIcon(userimg2);
+        JLabel img = new JLabel(userimg3);
+        img.setBounds(65, 19, 64, 64);
+        img.setIcon(userimg3);
+        img.setVisible(true);
+
+//        System.out.println(getClass().getResource("/icon/profile.png"));
+//        ImageIcon profile1 = new ImageIcon("src/main/resources/icon/profile.png");
+//        Image profile2 = profile1.getImage().getScaledInstance(64, 64, Image.SCALE_DEFAULT);
+//        ImageIcon profile3 = new ImageIcon(profile2);
+//        JLabel profileimg = new JLabel(profile3);
+//        profileimg.setBounds(62, 19, 64, 64);
+//        profileimg.setIcon(profile3);
+//        profileimg.setVisible(true);
+
+        System.out.println(getClass().getResource("/icon/employee.png"));
+        ImageIcon e1 = new ImageIcon("src/main/resources/icon/employee.png");
+        Image e2 = e1.getImage().getScaledInstance(32, 32, Image.SCALE_DEFAULT);
+        ImageIcon e3 = new ImageIcon(e2);
+        JLabel eimg = new JLabel(e3);
+        eimg.setBounds(80, 10, 32, 32);
+        eimg.setIcon(e3);
+        eimg.setVisible(true);
+
+        NhanVienP = new JPanel();
+        NhanVienP.setBackground(Color.BLACK);
+        NhanVienP.setBounds(0, 246, 195, 76);
+        NhanVienP.setLayout(null);
+        NhanVienP.add(lblEmployee);
+        NhanVienP.add(eimg);
+
+        JPanel panel = new JPanel();
+        panel.setBorder(BorderFactory.createEtchedBorder());
+        panel.setBackground(new Color(0, 0, 64));
+        panel.setBounds(0, 0, 195, 609);
+        panel.setLayout(null);
+        panel.add(NVname);
+        panel.add(NVposition);
+        panel.add(xemtt);
         panel.add(out);
-		
-		JPanel employee = new JPanel();
-		employee.setLayout(null);
-		employee.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0)));
-		employee.setBackground(UIManager.getColor("Button.background"));
-		employee.setBounds(188, 0, 988, 588);
-		frame.getContentPane().add(employee);
-		
-		table = new JTable();
-		table.setBounds(0, 0, 988, 522);
-		employee.add(table);
-		table.setToolTipText("");
-		table.setRowSelectionAllowed(false);
-		table.setFillsViewportHeight(true);
-		table.setColumnSelectionAllowed(true);
-		table.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
-		table.setBackground(new Color(238, 238, 238));
-		
-		JPanel menu = new JPanel();
-		menu.setBackground(new Color(222, 222, 222));
-		menu.setBounds(0, 522, 988, 66);
-		employee.add(menu);
-		menu.setLayout(null);
-		
-		JLabel lblNewLabel_5 = new JLabel("Input ID");
-		lblNewLabel_5.setFont(new Font("Tahoma", Font.BOLD, 12));
-		lblNewLabel_5.setBounds(32, 22, 61, 22);
-		menu.add(lblNewLabel_5);
-		
-		search_input = new JTextField();
-		search_input.setBounds(117, 25, 140, 19);
-		menu.add(search_input);
-		search_input.setColumns(10);
-		
-		JButton btnNewButton = new JButton("Search");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnNewButton.setBackground(new Color(0, 255, 0));
-		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 12));
-		btnNewButton.setBounds(290, 23, 78, 21);
-		menu.add(btnNewButton);
-		
+        panel.add(NhanVienP);
+        panel.add(img);
 
-		
-		// sự kiện click chuột
-        lblNewLabel.addMouseListener(new MouseAdapter() {
+        JPanel panel_2 = new JPanel();
+        panel_2.setBounds(0, 407, 1091, 202);
+        panel_2.setLayout(null);
 
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                onClick(xemtt);
-                onLeaveClick(NhanVienP);
-                
-            }
-        });
+        panel_2.add(lblBasicSalary);
+        panel_2.add(salary_input);
+        panel_2.add(id);
+        panel_2.add(name);
+        panel_2.add(birth);
+        panel_2.add(address);
+        panel_2.add(phone);
+        panel_2.add(position);
+        panel_2.add(status);
+        panel_2.add(mail);
+        panel_2.add(gender);
+        panel_2.add(name_input);
+        panel_2.add(birth_input);
+        panel_2.add(mail_input);
+        panel_2.add(phone_input);
+        panel_2.add(id_input);
+        panel_2.add(gen_input);
+        panel_2.add(pos_input);
+        panel_2.add(address_input);
+        panel_2.add(sta_input);
 
-        NhanVienP.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                onClick(NhanVienP);
-                onLeaveClick(xemtt);
-            }
-        });
-        
-        out.addMouseListener(new MouseAdapter() {
-        	@Override
-        	public void mouseClicked(MouseEvent e) {
-        		Signin_view signin = new Signin_view();
-        	//	signin.setVisible(true);
-        		frame.dispose();
-        	}
-        });
+        employee_P = new JPanel();
+        employee_P.setLayout(null);
+        employee_P.add(p);
+        employee_P.add(panel_2);
+
+        search = new JButton("Search");
+        search.setBounds(305, 22, 78, 21);
+        panel_2.add(search);
+        search.setBackground(new Color(0, 255, 0));
+        search.setFont(new Font("Tahoma", Font.BOLD, 12));
+
+        JPanel CenterPanel = new JPanel();
+        CenterPanel.setBounds(195, 0, 1091, 609);
+        CenterPanel.setLayout(new CardLayout(0, 0));
+        CenterPanel.add(employee_P, "name_88290729116700");
+
+        frame = new JFrame();
+        frame.setSize(1300, 646);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().setLayout(null);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+        frame.getContentPane().add(panel);
+        frame.getContentPane().add(CenterPanel);
+
+        employeeController = new Employee_controller(this);
 
     }
-
-    // click chuột
-    public void onClick(JPanel panel) {
-        panel.setBackground(new Color(0,0,205));
-
-    }
-
-    public void onLeaveClick(JPanel panel) {
-        panel.setBackground(Color.black);
-
-    }
-
-
-
 }
